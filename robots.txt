@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://resegment-addon.github.io/Resegment/sitemap.xml

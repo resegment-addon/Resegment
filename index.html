@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resegment</title>
+  <meta name="description" content="Resegment: a Blender add-on that changes the number of segments on rings, tubes, holes and bevels, with a live preview.">
+  <link rel="canonical" href="https://resegment-addon.github.io/Resegment/">
+  <link rel="icon" href="assets/logo/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/logo/resegment-icon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/logo/resegment-icon-16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="assets/logo/resegment-icon-180.png">
+  <meta property="og:title" content="Resegment">
+  <meta property="og:description" content="Change the number of segments on any ring, live. A Blender add-on.">
+  <meta property="og:image" content="https://resegment-addon.github.io/Resegment/assets/screenshots/holes-select.jpg">
+  <meta property="og:url" content="https://resegment-addon.github.io/Resegment/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/resegment.css">
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <span class="brand"><img src="assets/logo/resegment-icon-64.png" alt="" width="24" height="24" class="brand-icon"><span>Re<span class="brand-accent">segment</span></span></span>
+      <button id="lang-toggle" type="button">EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <h1 data-ru="Меняйте число сегментов на любом кольце — вживую" data-en="Change the number of segments on any ring — live">Меняйте число сегментов на любом кольце — вживую</h1>
+          <p data-ru="Аддон для Blender: цилиндры, отверстия, скруглённые углы и фаски. Живое превью: поворот колеса мыши — и вся труба перестраивается." data-en="A Blender add-on for cylinders, holes, rounded corners and chamfers. Live preview: turn the mouse wheel and the whole tube is rebuilt.">Аддон для Blender: цилиндры, отверстия, скруглённые углы и фаски. Живое превью: поворот колеса мыши — и вся труба перестраивается.</p>
+          <a href="#get" class="cta" data-ru="Как получить аддон" data-en="How to get the add-on">Как получить аддон</a>
+          <a href="#video" class="cta cta-ghost" data-ru="Смотреть видео" data-en="Watch the video">Смотреть видео</a>
+        </div>
+        <div class="hero-shot">
+          <img class="zoomable" src="assets/screenshots/holes-select.jpg" alt="Resegment: many similar holes selected and changed at once" width="640" height="360">
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="wrap">
+      <h2 data-ru="Как это работает" data-en="How it works">Как это работает</h2>
+      <div class="video-wrap">
+        <video controls preload="metadata" poster="assets/screenshots/cylinder.jpg" playsinline>
+          <source src="assets/video/resegment-demo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section id="how" class="wrap">
+      <h2 data-ru="Что умеет Resegment" data-en="What Resegment does">Что умеет Resegment</h2>
+      <div class="how-grid">
+        <div class="how-card">
+          <figure><img class="zoomable" src="assets/screenshots/cylinder.jpg" alt="A cylinder ring changed to 36 sides with a live preview" width="640" height="360"></figure>
+          <h3 data-ru="Кольца и цилиндры" data-en="Rings and cylinders">Кольца и цилиндры</h3>
+          <p data-ru="Выделите кольцо, запустите Resegment и крутите колесо: сторон становится больше или меньше, а вся труба следует за кольцом." data-en="Select a ring, start Resegment and turn the wheel: sides are added or removed and the whole tube follows the ring.">Выделите кольцо, запустите Resegment и крутите колесо: сторон становится больше или меньше, а вся труба следует за кольцом.</p>
+        </div>
+        <div class="how-card">
+          <figure><img class="zoomable" src="assets/screenshots/holes-result.jpg" alt="Many round holes after the change" width="640" height="360"></figure>
+          <h3 data-ru="Много отверстий сразу" data-en="Many holes at once">Много отверстий сразу</h3>
+          <p data-ru="Выделите одно кольцо и нажмите M: все похожие отверстия присоединяются к выделению, и их можно менять вместе." data-en="Select one ring and press M: every similar hole joins the selection, so you can change them all together.">Выделите одно кольцо и нажмите M: все похожие отверстия присоединяются к выделению, и их можно менять вместе.</p>
+        </div>
+        <div class="how-card">
+          <figure><img class="zoomable" src="assets/screenshots/bevel.jpg" alt="Bevel Editor: a rounded corner made wider" width="640" height="360"></figure>
+          <h3 data-ru="Редактор бевелов" data-en="Bevel Editor">Редактор бевелов</h3>
+          <p data-ru="Клавиша B: бевел можно сделать шире, уже или убрать совсем — с любым числом сегментов." data-en="Press B: make the bevel wider, narrower or remove it completely, with any number of segments.">Клавиша B: бевел можно сделать шире, уже или убрать совсем — с любым числом сегментов.</p>
+        </div>
+        <div class="how-card">
+          <figure><img class="zoomable" src="assets/screenshots/pockets.jpg" alt="Pockets with chamfered corners" width="640" height="360"></figure>
+          <h3 data-ru="Снять фаски у всех углов" data-en="Remove chamfers on every corner">Снять фаски у всех углов</h3>
+          <p data-ru="Выделите один угол, нажмите B, затем X: найдутся все такие же углы, и фаски превратятся в острые углы." data-en="Select one corner, press B, then X: all matching corners are found and the chamfers become sharp corners.">Выделите один угол, нажмите B, затем X: найдутся все такие же углы, и фаски превратятся в острые углы.</p>
+        </div>
+        <div class="how-card how-card-wide">
+          <div>
+            <h3 data-ru="И ещё" data-en="And more">И ещё</h3>
+            <p data-ru="Сохранение длинных прямых рёбер (S), переходы из n-угольников, четырёхугольников и треугольников (T), мост к другой дуге (G). Все клавиши и запуск аддона настраиваются в Preferences." data-en="Keep long straight edges (S), transitions with n-gons, quads and triangles (T), a bridge to another arc (G). Every key and the launch hotkey can be changed in Preferences.">Сохранение длинных прямых рёбер (S), переходы из n-угольников, четырёхугольников и треугольников (T), мост к другой дуге (G). Все клавиши и запуск аддона настраиваются в Preferences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get" class="wrap wrap--narrow">
+      <h2 data-ru="Как получить аддон" data-en="How to get the add-on">Как получить аддон</h2>
+      <p data-ru="Resegment получают те, кто поддержал проект. Я делюсь скриптами и аддонами, которыми пользуюсь в своей работе." data-en="Resegment goes to everyone who supports the project. I share the scripts and add-ons I use in my daily work.">Resegment получают те, кто поддержал проект. Я делюсь скриптами и аддонами, которыми пользуюсь в своей работе.</p>
+      <ol class="steps">
+        <li data-ru="Выберите способ: подписка на Boosty (основной) или разовый донат через DonationAlerts (от 300 ₽ ≈ 3,6 $ / 3,2 €)." data-en="Pick a way: a Boosty subscription (the main one) or a one-time donation via DonationAlerts (from 300 RUB ≈ 3.6 USD / 3.2 EUR).">Выберите способ: подписка на Boosty (основной) или разовый донат через DonationAlerts (от 300 ₽ ≈ 3,6 $ / 3,2 €).</li>
+        <li data-ru="Boosty: оформите подписку, ссылка на архив будет в закрытом посте, а подписка даёт доступ ко всем постам, которые будут выходить. DonationAlerts: в сообщении к донату укажите свою почту, я пришлю ссылку на неё." data-en="Boosty: subscribe and the download link is in a members-only post; the subscription gives access to all the posts that will be published. DonationAlerts: write your email in the donation message and I will send the link there.">Boosty: оформите подписку, ссылка на архив будет в закрытом посте, а подписка даёт доступ ко всем постам, которые будут выходить. DonationAlerts: в сообщении к донату укажите свою почту, я пришлю ссылку на неё.</li>
+        <li data-ru="Скачайте файл Resegment.zip. Распаковывать его не нужно." data-en="Download Resegment.zip. You do not need to unpack it.">Скачайте файл Resegment.zip. Распаковывать его не нужно.</li>
+        <li data-ru="В Blender: Edit → Preferences → Add-ons → Install from Disk… → выберите архив и включите галочку у Resegment." data-en="In Blender: Edit → Preferences → Add-ons → Install from Disk… → pick the archive and tick Resegment on.">В Blender: Edit → Preferences → Add-ons → Install from Disk… → выберите архив и включите галочку у Resegment.</li>
+        <li data-ru="В режиме редактирования: меню Edge (Ctrl+E) → Resegment. Хоткей запуска можно назначить в настройках аддона." data-en="In Edit Mode: Edge menu (Ctrl+E) → Resegment. You can assign a launch hotkey in the add-on preferences.">В режиме редактирования: меню Edge (Ctrl+E) → Resegment. Хоткей запуска можно назначить в настройках аддона.</li>
+      </ol>
+      <p class="note" data-ru="Нужен Blender 4.4 или новее." data-en="Blender 4.4 or newer is required.">Нужен Blender 4.4 или новее.</p>
+      <div class="cta-row">
+        <a href="https://boosty.to/gamedev_tut" class="cta" target="_blank" rel="noopener" data-ru="Подписаться на Boosty" data-en="Subscribe on Boosty">Подписаться на Boosty</a>
+        <a href="https://dalink.to/cococnut_crab" class="cta cta-ghost" target="_blank" rel="noopener" data-ru="Донат через DonationAlerts" data-en="Donate via DonationAlerts">Донат через DonationAlerts</a>
+      </div>
+    </section>
+
+    <section id="feedback" class="wrap wrap--narrow">
+      <h2 data-ru="Обратная связь" data-en="Feedback">Обратная связь</h2>
+      <p data-ru="Баг, идея или вопрос — без аккаунта GitHub и без почты." data-en="A bug, an idea, or a question — no GitHub account or email needed.">Баг, идея или вопрос — без аккаунта GitHub и без почты.</p>
+
+      <form id="feedback-form" class="panel" novalidate>
+        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <fieldset id="feedback-type">
+          <legend data-ru="Тип обращения" data-en="Type">Тип обращения</legend>
+          <label><input type="radio" name="type" value="bug" required> <span data-ru="Баг" data-en="Bug">Баг</span></label>
+          <label><input type="radio" name="type" value="feature"> <span data-ru="Идея / хотелка" data-en="Feature request">Идея / хотелка</span></label>
+          <label><input type="radio" name="type" value="question"> <span data-ru="Вопрос" data-en="Question">Вопрос</span></label>
+          <label><input type="radio" name="type" value="other"> <span data-ru="Другое" data-en="Other">Другое</span></label>
+        </fieldset>
+
+        <div class="field-group severity-field" hidden>
+          <label for="feedback-severity" data-ru="Насколько критично" data-en="How critical">Насколько критично</label>
+          <select id="feedback-severity" name="severity">
+            <option value="" data-ru="— выберите —" data-en="— choose —" selected disabled>— выберите —</option>
+            <option value="critical" data-ru="Блокирует работу / крашит Blender" data-en="Blocks work / crashes Blender">Блокирует работу / крашит Blender</option>
+            <option value="major" data-ru="Функция не работает" data-en="A feature does not work">Функция не работает</option>
+            <option value="minor" data-ru="Мелочь, косметика" data-en="Cosmetic, minor">Мелочь, косметика</option>
+          </select>
+        </div>
+
+        <div class="field-group versions-field" hidden>
+          <div class="field-group">
+            <label for="feedback-blender-version" data-ru="Версия Blender" data-en="Blender version">Версия Blender</label>
+            <input type="text" id="feedback-blender-version" name="blenderVersion" placeholder="4.4.0">
+          </div>
+          <div class="field-group">
+            <label for="feedback-addon-version" data-ru="Версия Resegment" data-en="Resegment version">Версия Resegment</label>
+            <input type="text" id="feedback-addon-version" name="addonVersion" placeholder="0.1.0">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="feedback-description" data-ru="Описание" data-en="Description">Описание</label>
+          <textarea id="feedback-description" name="description" rows="5" required></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="feedback-contact" data-ru="Контакт для ответа (необязательно, будет виден публично в GitHub Issues)" data-en="Contact info (optional, will be publicly visible on GitHub)">Контакт для ответа (необязательно, будет виден публично в GitHub Issues)</label>
+          <input type="text" id="feedback-contact" name="contact">
+        </div>
+
+        <button type="submit" class="cta" data-ru="Отправить" data-en="Submit">Отправить</button>
+        <div id="feedback-result"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span data-ru="Resegment — аддон для Blender" data-en="Resegment — a Blender add-on">Resegment — аддон для Blender</span>
+  </footer>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/feedback.js"></script>
+  <script src="assets/lightbox.js"></script>
+</body>
+</html>
