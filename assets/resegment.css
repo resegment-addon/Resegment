@@ -5,3 +5,4 @@
 .note { color: #a79f94; font-size: .95rem; }
 .cta-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
 footer { text-align: center; }
+.note-strong { color: #e8e2d9; border-left: 3px solid var(--accent); padding-left: .8rem; margin-top: 1rem; }
