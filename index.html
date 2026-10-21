@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resegment</title>
-  <meta name="description" content="Resegment: a Blender add-on that changes the number of segments on rings, tubes, holes and bevels, with a live preview.">
+  <meta name="description" content="Resegment: a Blender add-on that changes the number of segments on rings, tubes, holes and bevels, with a live preview. Version 0.2 adds a panel, Curvature, loops between and Preserve UV.">
   <link rel="canonical" href="https://resegment-addon.github.io/Resegment/">
   <link rel="icon" href="assets/logo/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/logo/resegment-icon-32.png" sizes="32x32">
@@ -35,7 +35,7 @@
       <div class="wrap">
         <div class="hero-copy">
           <h1 data-ru="Меняйте число сегментов на любом кольце — вживую" data-en="Change the number of segments on any ring — live">Меняйте число сегментов на любом кольце — вживую</h1>
-          <p data-ru="Аддон для Blender: цилиндры, отверстия, скруглённые углы и фаски. Живое превью: поворот колеса мыши — и вся труба перестраивается." data-en="A Blender add-on for cylinders, holes, rounded corners and chamfers. Live preview: turn the mouse wheel and the whole tube is rebuilt.">Аддон для Blender: цилиндры, отверстия, скруглённые углы и фаски. Живое превью: поворот колеса мыши — и вся труба перестраивается.</p>
+          <p data-ru="Аддон для Blender: цилиндры, отверстия, скруглённые углы и фаски. Живое превью: поворот колеса мыши — и вся труба перестраивается. Версия 0.2: панель, Curvature, петли между и Preserve UV." data-en="A Blender add-on for cylinders, holes, rounded corners and chamfers. Live preview: turn the mouse wheel and the whole tube is rebuilt. Version 0.2: a panel, Curvature, loops between and Preserve UV.">Аддон для Blender: цилиндры, отверстия, скруглённые углы и фаски. Живое превью: поворот колеса мыши — и вся труба перестраивается. Версия 0.2: панель, Curvature, петли между и Preserve UV.</p>
           <a href="#get" class="cta" data-ru="Как получить аддон" data-en="How to get the add-on">Как получить аддон</a>
           <a href="#video" class="cta cta-ghost" data-ru="Смотреть видео" data-en="Watch the video">Смотреть видео</a>
         </div>
@@ -57,6 +57,26 @@
     <section id="how" class="wrap">
       <h2 data-ru="Что умеет Resegment" data-en="What Resegment does">Что умеет Resegment</h2>
       <div class="how-grid">
+        <div class="how-card">
+          <figure><img class="zoomable" src="assets/screenshots/panel.jpg" alt="The Resegment panel next to a tube with holes" width="640" height="360"></figure>
+          <h3><span class="new-tag">0.2</span> <span data-ru="Новая панель" data-en="A real panel">Новая панель</span></h3>
+          <p data-ru="Интерфейс теперь панель: перетащите её куда удобно, кликайте по строкам, чтобы переключать опции, и тяните число вбок, как колесо мыши." data-en="The interface is now a panel: drag it anywhere, click a row to switch an option, and drag a number sideways like the mouse wheel.">Интерфейс теперь панель: перетащите её куда удобно, кликайте по строкам, чтобы переключать опции, и тяните число вбок, как колесо мыши.</p>
+        </div>
+        <div class="how-card">
+          <figure><img class="zoomable" src="assets/screenshots/loops.jpg" alt="Loops between: extra loops added inside every hole" width="640" height="360"></figure>
+          <h3><span class="new-tag">0.2</span> <span data-ru="Петли между" data-en="Loops between">Петли между</span></h3>
+          <p data-ru="Нажмите I, и колесо добавляет петли вдоль трубы вместо изменения числа сторон. Нажмите M, и все похожие отверстия получат такие же петли сразу." data-en="Press I, and the wheel adds loops along the tube instead of changing the sides. Press M, and every similar hole gets the same loops at once.">Нажмите I, и колесо добавляет петли вдоль трубы вместо изменения числа сторон. Нажмите M, и все похожие отверстия получат такие же петли сразу.</p>
+        </div>
+        <div class="how-card">
+          <figure><img class="zoomable" src="assets/screenshots/curvature.jpg" alt="Curvature: a row of grooves made from several strips at once" width="640" height="360"></figure>
+          <h3><span class="new-tag">0.2</span> <span data-ru="Curvature" data-en="Curvature">Curvature</span></h3>
+          <p data-ru="Клавиша C изгибает дугу наружу или вдавливает её в поверхность, отрицательные значения прорезают канавку. Ctrl + колесо задаёт профиль, от мягкой кривой до идеальной окружности. Работает на многих полосах сразу." data-en="Press C to bend an arc out or into the surface; negative values dig a groove. Ctrl + wheel sets the profile, from a soft curve to a perfect circle. It works on many strips at once.">Клавиша C изгибает дугу наружу или вдавливает её в поверхность, отрицательные значения прорезают канавку. Ctrl + колесо задаёт профиль, от мягкой кривой до идеальной окружности. Работает на многих полосах сразу.</p>
+        </div>
+        <div class="how-card">
+          <figure><img class="zoomable" src="assets/screenshots/preserve-uv.jpg" alt="Preserve UV: the checker texture stays while the sides change" width="640" height="360"></figure>
+          <h3><span class="new-tag">0.2</span> <span data-ru="Preserve UV" data-en="Preserve UV">Preserve UV</span></h3>
+          <p data-ru="Клавиша U сохраняет текстуру и швы на месте, пока вы меняете число сторон. Работает и с отверстиями: шахматный узор не двигается." data-en="Press U to keep your texture and seams in place while you change the sides. It works on holes too: the checker pattern does not move.">Клавиша U сохраняет текстуру и швы на месте, пока вы меняете число сторон. Работает и с отверстиями: шахматный узор не двигается.</p>
+        </div>
         <div class="how-card">
           <figure><img class="zoomable" src="assets/screenshots/cylinder.jpg" alt="A cylinder ring changed to 36 sides with a live preview" width="640" height="360"></figure>
           <h3 data-ru="Кольца и цилиндры" data-en="Rings and cylinders">Кольца и цилиндры</h3>
@@ -80,7 +100,7 @@
         <div class="how-card how-card-wide">
           <div>
             <h3 data-ru="И ещё" data-en="And more">И ещё</h3>
-            <p data-ru="Сохранение длинных прямых рёбер (S), переходы из n-угольников, четырёхугольников и треугольников (T), мост к другой дуге (G). Все клавиши и запуск аддона настраиваются в Preferences." data-en="Keep long straight edges (S), transitions with n-gons, quads and triangles (T), a bridge to another arc (G). Every key and the launch hotkey can be changed in Preferences.">Сохранение длинных прямых рёбер (S), переходы из n-угольников, четырёхугольников и треугольников (T), мост к другой дуге (G). Все клавиши и запуск аддона настраиваются в Preferences.</p>
+            <p data-ru="Сохранение длинных прямых рёбер (S), переходы из n-угольников, четырёхугольников и треугольников (T). Все клавиши и запуск аддона настраиваются в Preferences." data-en="Keep long straight edges (S), transitions with n-gons, quads and triangles (T). Every key and the launch hotkey can be changed in Preferences.">Сохранение длинных прямых рёбер (S), переходы из n-угольников, четырёхугольников и треугольников (T). Все клавиши и запуск аддона настраиваются в Preferences.</p>
           </div>
         </div>
       </div>
@@ -137,7 +157,7 @@
           </div>
           <div class="field-group">
             <label for="feedback-addon-version" data-ru="Версия Resegment" data-en="Resegment version">Версия Resegment</label>
-            <input type="text" id="feedback-addon-version" name="addonVersion" placeholder="0.1.0">
+            <input type="text" id="feedback-addon-version" name="addonVersion" placeholder="0.2.0">
           </div>
         </div>
 

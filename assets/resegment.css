@@ -6,3 +6,5 @@
 .cta-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
 footer { text-align: center; }
 .note-strong { color: #e8e2d9; border-left: 3px solid var(--accent); padding-left: .8rem; margin-top: 1rem; }
+
+.new-tag{display:inline-block;margin-right:.4em;padding:0 .45em;border-radius:6px;background:#f5792a;color:#fff;font-size:.7em;font-weight:700;vertical-align:.12em;letter-spacing:.03em}
